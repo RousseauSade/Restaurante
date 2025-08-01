@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Restaurante sensorial inclusivo para personas con discapacidad visual. Experiencia gastronómica única en Bogotá.">
+    <title>BlindSpot | Restaurante Sensorial Inclusivo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./scripts.js"></script>
+    <style>
+        /* Estilos básicos (CSS completo lo enviaré después) */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #FFF;
+        }
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Navigation Link (Accesibilidad) -->
+    <a href="#main-content" class="sr-only">Saltar al contenido principal</a>
+
+    <!-- Header -->
+    <header role="banner" aria-label="Cabecera principal">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html" aria-label="Ir a inicio">
+                    <img src="images/logo-blindspot.png" alt="BlindSpot - Logo" width="200">
+                </a>
+            </div>
+
+            <!-- Navegación Principal -->
+            <nav role="navigation" aria-label="Menú principal">
+                <ul>
+                    <li><a href="#experiencia" aria-current="page">Experiencia</a></li>
+                    <li><a href="#menu">Menú</a></li>
+                    <li><a href="#reservas">Reservas</a></li>
+                    <li><a href="#experiencia">Experiencia</a></li>
+                    <li><a href="#contactanos">Contactanos</a></li>
+                </ul>
+            </nav>
+
+            <!-- Selector de Accesibilidad -->
+            <div class="accessibility-tools">
+                <button id="high-contrast" aria-label="Activar alto contraste">
+                    <span aria-hidden="true">⠿</span>
+                </button>
+                <button id="read-aloud" aria-label="Leer página en voz alta">
+                    <i class="fas fa-volume-up" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" role="region" aria-label="Presentación principal">
+        <div class="hero-content">
+            <h1>Descubre una experiencia gastronómica donde los sentidos despiertan</h1>
+            <p>Un espacio diseñado para personas con discapacidad visual, pero abierto a todos quienes quieran vivir una cena sin prejuicios.</p>
+            <div class="cta-buttons">
+                <a href="#reservas" class="btn-primary">Reserva ahora</a>
+                <a href="#menu" class="btn-secondary">Explora el menú</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenido Principal -->
+    <main id="main-content" role="main">
+        <!-- Sección Experiencia -->
+        <section id="experiencia" class="section-dark" aria-labelledby="exp-heading">
+            <div class="container">
+                <h2 id="exp-heading">La Experiencia BlindSpot</h2>
+                <div class="experience-grid">
+                    <div class="experience-item">
+                        <div class="icon" aria-hidden="true">⠇</div>
+                        <h3>Menús Accesibles</h3>
+                        <p>Disponibles en braille, audio y a través de nuestra app con lector de voz integrado.</p>
+                    </div>
+                    <div class="experience-item">
+                        <div class="icon" aria-hidden="true">⠕</div>
+                        <h3>Oscuridad Total</h3>
+                        <p>Ambiente 100% oscuro para agudizar tus otros sentidos durante la cena.</p>
+                    </div>
+                    <div class="experience-item">
+                        <div class="icon" aria-hidden="true">⠃</div>
+                        <h3>Personal Capacitado</h3>
+                        <p>Guías entrenados para ofrecer una experiencia segura e inolvidable.</p>
+                    </div>
+                </div>
+
+                <!-- Video Testimonial -->
+                <div class="video-container">
+                    <video controls aria-labelledby="video-label">
+                        <source src="videos/testimonial.mp4" type="video/mp4">
+                        <track kind="captions" src="videos/captions.vtt" srclang="es" label="Español">
+                        <p>Su navegador no soporta el elemento de video. <a href="videos/testimonial.mp4">Descargar video</a></p>
+                    </video>
+                    <p id="video-label" class="sr-only">Testimonio de clientes sobre su experiencia en BlindSpot</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Menú -->
+        <section id="menu" class="section-light" aria-labelledby="menu-heading">
+            <div class="container">
+                <h2 id="menu-heading">Nuestro Menú Sensorial</h2>
+                <p class="section-subtitle">Platos diseñados para explorar texturas, aromas y sabores</p>
+
+                <!-- Filtros -->
+                <div class="menu-filters" role="group" aria-label="Filtros del menú">
+                    <button class="filter-btn active" data-category="all">Todo</button>
+                    <button class="filter-btn" data-category="entradas">Entradas</button>
+                    <button class="filter-btn" data-category="principales">Platos Principales</button>
+                    <button class="filter-btn" data-category="postres">Postres</button>
+                </div>
+
+                <!-- Items del Menú -->
+                <div class="menu-items">
+                    <!-- Entrada 1 -->
+                    <article class="menu-item" data-category="entradas" tabindex="0">
+                        <div class="item-header">
+                            <h3>Ceviche de mango y camarones</h3>
+                            <span class="price">$24.000</span>
+                        </div>
+                        <p class="item-description">Mango fresco, camarones, limón, cebolla morada y cilantro. Textura crujiente y sabor refrescante.</p>
+                        <div class="item-meta">
+                            <span class="origin">América Latina</span>
+                            <span class="braille" aria-hidden="true">⠝⠥⠑⠧⠕ ⠍⠥⠝⠙⠕</span>
+                        </div>
+                    </article>
+
+                    <!-- Plato Principal 1 -->
+                    <article class="menu-item" data-category="principales" tabindex="0">
+                        <div class="item-header">
+                            <h3>Lomo al ají de cocona</h3>
+                            <span class="price">$38.000</span>
+                        </div>
+                        <p class="item-description">Ternera jugosa con salsa de cocona amazónica, acompañada de puré de yuca y choclo.</p>
+                        <div class="item-meta">
+                            <span class="origin">Amazonía Colombiana</span>
+                            <span class="braille" aria-hidden="true">⠧⠊⠑⠚⠕ ⠍⠥⠝⠙⠕</span>
+                        </div>
+                    </article>
+
+                    <!-- Más items... -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Reservas -->
+        <section id="reservas" class="section-dark" aria-labelledby="reservas-heading">
+            <div class="container">
+                <h2 id="reservas-heading">Reserva tu Experiencia</h2>
+                <form id="reservation-form" aria-labelledby="reservas-heading">
+                    <div class="form-group">
+                        <label for="name">Nombre completo*</label>
+                        <input type="text" id="name" name="name" required aria-required="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo electrónico*</label>
+                        <input type="email" id="email" name="email" required aria-required="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Teléfono*</label>
+                        <input type="tel" id="phone" name="phone" required aria-required="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">Fecha*</label>
+                        <input type="date" id="date" name="date" required aria-required="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guests">Número de personas*</label>
+                        <select id="guests" name="guests" required aria-required="true">
+                            <option value="">Seleccione...</option>
+                            <option value="1">1 persona</option>
+                            <option value="2">2 personas</option>
+                            <option value="3-4">3-4 personas</option>
+                            <option value="5+">5 o más personas</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="assistance" name="assistance">
+                        <label for="assistance">Requiero asistencia especial</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments">Comentarios adicionales</label>
+                        <textarea id="comments" name="comments" rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Confirmar Reserva</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Sección Ubicación -->
+        <section id="ubicacion" class="section-map" aria-labelledby="ubicacion-heading">
+        <div class="container">
+            <h2 id="ubicacion-heading">Encuéntranos</h2>
+            <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.785244667283!2d-74.0558609!3d4.6322299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a3e0e9d0d0f%3A0x1b8e6d7b1b3e0b0f!2sCl.%20127%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1620000000000!5m2!1ses!2sco" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"
+                aria-label="Mapa de Avenida Calle 127 en Bogotá"
+                title="Ubicación aproximada en Avenida Calle 127">
+            </iframe>
+            </div>
+            <div class="location-info">
+            <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Avenida Calle 127, Bogotá</p>
+            <p><i class="fas fa-phone" aria-hidden="true"></i> +57 XXX XXX XXXX</p>
+            <p><i class="fas fa-envelope" aria-hidden="true"></i> info@blindspot-experience.com</p>
+            </div>
+        </div>
+
+        <div class="footer-col">
+    <div class="contact-buttons">
+        <button id="call-btn" class="btn-contact">
+            <i class="fas fa-phone"></i> Llamar
+        </button>
+        <button id="email-btn" class="btn-contact">
+            <i class="fas fa-envelope"></i> Email
+        </button>
+        <button id="whatsapp-btn" class="btn-contact">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </button>
+    </div>
+</div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contactanos" role="contentinfo" aria-label="Pie de página">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>BlindSpot</h3>
+                    <p>El primer restaurante sensorial inclusivo de Bogotá, diseñado para personas con discapacidad visual pero abierto a todos.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Horarios</h3>
+                    <ul>
+                        <li>Lunes a Jueves: 12pm - 10pm</li>
+                        <li>Viernes y Sábado: 12pm - 11pm</li>
+                        <li>Domingo: 12pm - 8pm</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Redes Sociales</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 BlindSpot. Todos los derechos reservados.</p>
+                <ul>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Términos de servicio</a></li>
+                    <li><a href="#">Mapa del sitio</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
