@@ -123,7 +123,7 @@
                         </div>
                     </div>
                     <div class="about-image">
-                        <img src="./assets/images/our-story.jpg" alt="Personal de BlindSpot preparando la experiencia sensorial" loading="lazy">
+                        <img src="./assets/images/our-story.png" alt="Personal de BlindSpot preparando la experiencia sensorial" loading="lazy">
                     </div>
                 </div>
 
@@ -230,27 +230,31 @@
                 <!-- Items del Menú (72 ÍTEMS) -->
         <!-- Items del Menú (72 ÍTEMS) -->
         <div class="menu-items" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <!-- Los primeros ítems del menú se mostrarán, el resto se ocultará inicialmente -->
             
             <!-- ENTRADAS (8 ÍTEMS) -->
             <h3 style="grid-column: 1 / -1; color: #FFD700; text-align: left; margin-top: 40px;"><i class="fas fa-cheese"></i> ENTRADAS (8)</h3>
 
             <article class="menu-item" data-category="entrada" data-region="europa" tabindex="0">
-              <div class="item-image"><img src="./assets/images/menu/bruschetta-tomate-albahaca.jpg" alt="Bruschetta de Tomate y Albahaca Rústica" loading="lazy"></div>
-                <div class="item-content"><div class="item-header"><h3>Bruschetta de Tomate y Albahaca <span class="code">(MN001)</span></h3><span class="price">$7,500</span></div>
+                            <div class="item-image"><img src="./assets/images/menu/bruschetta-tomate-albahaca.jpg" alt="Bruschetta de Tomate y Albahaca Rústica" loading="lazy"></div>
+                                <div class="item-content"><div class="item-header"><h3>Bruschetta de Tomate y Albahaca <span class="code">(MN001)</span></h3><span class="price">$7,500</span></div>
+                                <span class="braille-label" aria-label="Bruschetta de Tomate y Albahaca en braille">⠃⠗⠥⠎⠉⠓⠑⠞⠞⠁⠀⠙⠑⠀⠞⠕⠍⠁⠞⠑⠀⠽⠀⠁⠇⠃⠁⠓⠁⠉⠁</span>
                     <p class="item-description">Pan baguette crujiente con la frescura jugosa del tomate y el aroma intenso de la albahaca fresca. (220 g)</p>
                     <p class="item-ingredients">Ingredientes: Pan baguette, Tomate, Albahaca, Aceite de oliva.</p>
                     <div class="item-meta"><span class="origin"><i class="fas fa-globe-europe"></i> Italia</span><span class="recommendation" data-rentabilidad="ALTA">✅ Recomendación</span></div></div>
             </article>
             <article class="menu-item" data-category="entrada" data-region="oriente-medio" tabindex="0">
-              <div class="item-image"><img src="./assets/images/menu/hummus-vegetales.jpg" alt="Hummus con Vegetales Frescos" loading="lazy"></div>
-                <div class="item-content"><div class="item-header"><h3>Hummus con Vegetales Frescos <span class="code">(MN014)</span></h3><span class="price">$6,000</span></div>
+                            <div class="item-image"><img src="./assets/images/menu/hummus-vegetales.jpg" alt="Hummus con Vegetales Frescos" loading="lazy"></div>
+                                <div class="item-content"><div class="item-header"><h3>Hummus con Vegetales Frescos <span class="code">(MN014)</span></h3><span class="price">$6,000</span></div>
+                                <span class="braille-label" aria-label="Hummus con Vegetales Frescos en braille">⠓⠥⠍⠍⠥⠎⠀⠉⠕⠝⠀⠧⠑⠛⠑⠞⠁⠇⠑⠎⠀⠋⠗⠑⠎⠉⠕⠎</span>
                     <p class="item-description">Textura suave y sedosa de garbanzos con un toque de acidez de limón. Crujido de los vegetales frescos. (135 g)</p>
                     <p class="item-ingredients">Ingredientes: Garbanzos, Tahini, Ajo, Limón, Aceite de oliva.</p>
                     <div class="item-meta"><span class="origin"><i class="fas fa-globe-africa"></i> Oriente Medio</span><span class="recommendation" data-rentabilidad="BUENA">Rentabilidad BUENA</span></div></div>
             </article>
             <article class="menu-item" data-category="entrada" data-region="africa" tabindex="0">
-              <div class="item-image"><img src="./assets/images/menu/sopa-lentejas.jpg" alt="Sopa de Lentejas con Especias" loading="lazy"></div>
-                <div class="item-content"><div class="item-header"><h3>Sopa de Lentejas con Especias <span class="code">(MN025)</span></h3><span class="price">$12,000</span></div>
+                            <div class="item-image"><img src="./assets/images/menu/sopa-lentejas.jpg" alt="Sopa de Lentejas con Especias" loading="lazy"></div>
+                                <div class="item-content"><div class="item-header"><h3>Sopa de Lentejas con Especias <span class="code">(MN025)</span></h3><span class="price">$12,000</span></div>
+                                <span class="braille-label" aria-label="Sopa de Lentejas con Especias en braille">⠎⠕⠏⠁⠀⠙⠑⠀⠇⠑⠝⠞⠑⠚⠁⠎⠀⠉⠕⠝⠀⠑⠎⠏⠑⠉⠊⠁⠎</span>
                     <p class="item-description">Sopa espesa y caliente. Aromas profundos de comino y cúrcuma. Lenteja suave y tierna. (215 g)</p>
                     <p class="item-ingredients">Ingredientes: Lentejas, Comino, Cúrcuma, Zanahoria, Cebolla.</p>
                     <div class="item-meta"><span class="origin"><i class="fas fa-globe-africa"></i> África del Norte</span><span class="recommendation" data-rentabilidad="EXCELENTE">🌟 EXCELENTE</span></div></div>
@@ -258,6 +262,7 @@
             <article class="menu-item" data-category="entrada" data-region="mexico" tabindex="0">
               <div class="item-image"><img src="./assets/images/menu/tacos-vegetarianos.jpg" alt="Tacos Vegetarianos" loading="lazy"></div>
                 <div class="item-content"><div class="item-header"><h3>Tacos Vegetarianos <span class="code">(MN031)</span></h3><span class="price">$6,300</span></div>
+                    <span class="braille-label" aria-label="Tacos Vegetarianos en braille">⠞⠁⠉⠕⠎⠀⠧⠑⠛⠑⠞⠁⠝⠕⠎</span> 
                     <p class="item-description">Tortillas suaves y calientes rellenas de frijoles cremosos y el centro suave del aguacate. (270 g)</p>
                     <p class="item-ingredients">Ingredientes: Tortillas, Frijoles negros, Aguacate, Pico de gallo.</p>
                     <div class="item-meta"><span class="origin"><i class="fas fa-globe-americas"></i> México</span><span class="recommendation" data-rentabilidad="BUENA">Rentabilidad BUENA</span></div></div>
@@ -265,6 +270,7 @@
             <article class="menu-item" data-category="entrada" data-region="europa" tabindex="0">
               <div class="item-image"><img src="./assets/images/menu/bruschetta-tomate-albahaca.jpg" alt="Bruschetta de Tomate y Albahaca Rústica" loading="lazy"></div>
                 <div class="item-content"><div class="item-header"><h3>Bruschetta de Tomate y Albahaca Rústica <span class="code">(MN037)</span></h3><span class="price">$18,000</span></div>
+                <span class="braille-label" aria-label="Bruschetta de Tomate y Albahaca Rústica en braille">⠃⠗⠥⠎⠉⠓⠑⠏⠞⠁⠀⠙⠑⠀⠞⠕⠍⠁⠞⠑⠀⠽⠀⠁⠇⠃⠁⠉⠁</span>
                     <p class="item-description">Pan rústico de corte grueso y firme. Jugo del tomate fresco y aroma aceitoso con albahaca intensa. (195g)</p>
                     <p class="item-ingredients">Ingredientes: Pan rústico, Tomate, Albahaca, Aceite de oliva.</p>
                     <div class="item-meta"><span class="origin"><i class="fas fa-globe-europe"></i> Italia</span><span class="recommendation" data-rentabilidad="EXCELENTE">🌟 EXCELENTE</span></div></div>
@@ -272,6 +278,7 @@
             <article class="menu-item" data-category="entrada" data-region="colombia" tabindex="0">
               <div class="item-image"><img src="./assets/images/menu/arepas-rellenas-queso.jpg" alt="Arepas Rellenas de Queso" loading="lazy"></div>
                 <div class="item-content"><div class="item-header"><h3>Arepas Rellenas de Queso <span class="code">(MN041)</span></h3><span class="price">$6,000</span></div>
+                <span class="braille-label" aria-label="Arepas Rellenas de Queso en braille">⠁⠗⠑⠏⠁⠎⠀⠗⠑⠇⠇⠑⠝⠁⠎⠀⠙⠑⠀⠟⠥⠑⠎⠕</span>
                     <p class="item-description">Masa de maíz caliente y suave, con el queso costeño salado y elástico fundiéndose en el centro. (220 g)</p>
                     <p class="item-ingredients">Ingredientes: Harina de maíz blanca, Queso costeño, Agua, Sal.</p>
                     <div class="item-meta"><span class="origin"><i class="fas fa-flag"></i> Colombia</span><span class="recommendation" data-rentabilidad="BUENA">Rentabilidad BUENA</span></div></div>
@@ -279,6 +286,7 @@
             <article class="menu-item" data-category="entrada" data-region="america-latina" tabindex="0">
               <div class="item-image"><img src="./assets/images/menu/ceviche-mango-camarones.jpg" alt="Ceviche de Mango y Camarones" loading="lazy"></div>
                 <div class="item-content"><div class="item-header"><h3>Ceviche de Mango y Camarones <span class="code">(MN052)</span></h3><span class="price">$8,250</span></div>
+                <span class="braille-label" aria-label="Ceviche de Mango y Camarones en braille">⠉⠑⠧⠊⠉⠓⠑⠀⠙⠑⠀⠍⠁⠝⠛⠕⠀⠽⠀⠉⠁⠍⠁⠗⠕⠝⠑⠎</span>
                     <p class="item-description">Textura suave y firme del camarón. Sabor cítrico del limón y el toque dulce y carnoso del mango fresco. (240 g)</p>
                     <p class="item-ingredients">Ingredientes: Mango, Camarones, Limón, Cebolla morada, Cilantro.</p>
                     <div class="item-meta"><span class="origin"><i class="fas fa-globe-americas"></i> América Latina</span><span class="recommendation" data-rentabilidad="BUENA">Rentabilidad BUENA</span></div></div>
@@ -286,6 +294,7 @@
             <article class="menu-item" data-category="entrada" data-region="asia" tabindex="0">
               <div class="item-image"><img src="./assets/images/menu/rollitos-primavera.jpg" alt="Rollitos Primavera Vegetarianos" loading="lazy"></div>
                 <div class="item-content"><div class="item-header"><h3>Rollitos Primavera Vegetarianos <span class="code">(MN072)</span></h3><span class="price">$5,250</span></div>
+                <span class="braille-label" aria-label="Rollitos Primavera Vegetarianos en braille">⠗⠕⠇⠇⠊⠕⠞⠕⠎⠀⠏⠗⠊⠍⠑⠗⠏⠊⠏⠑⠗⠕⠝⠁⠇⠑⠎</span>
                     <p class="item-description">Hoja de papel de arroz ligera y elástica. El relleno de vegetales frescos se siente crujiente. (100 g)</p>
                     <p class="item-ingredients">Ingredientes: Papel de arroz, Vegetales frescos, Salsa de soya.</p>
                     <div class="item-meta"><span class="origin"><i class="fas fa-globe-asia"></i> Asia</span><span class="recommendation" data-rentabilidad="EXCELENTE">🌟 EXCELENTE</span></div></div>
@@ -297,6 +306,7 @@
             <article class="menu-item" data-category="plato-principal" data-region="america-norte" tabindex="0">
                 <div class="item-image"><img src="./assets/images/menu/asado-cerdo.jpg" alt="Asado de Cerdo con Salsa BBQ" loading="lazy"></div>
                 <div class="item-content"><div class="item-header"><h3>Asado de Cerdo con Salsa BBQ <span class="code">(MN004)</span></h3><span class="price">$27,000</span></div>
+                <span class="braille-label" aria-label="Asado de Cerdo con Salsa BBQ en braille">⠁⠎⠁⠙⠕⠀⠙⠑⠀⠉⠑⠗⠙⠕⠀⠉⠕⠝⠀⠎⠁⠇⠎⠁⠀⠃⠃⠕⠭</span>
                     <p class="item-description">Carne tierna y jugosa que se deshace con el tenedor. Salsa densa, ahumada y dulce. (330 g)</p>
                     <p class="item-ingredients">Ingredientes: Costillas de cerdo, Salsa BBQ.</p>
                     <div class="item-meta"><span class="origin"><i class="fas fa-globe-americas"></i> América del Norte</span><span class="recommendation" data-rentabilidad="ALTA">✅ Recomendación</span></div></div>
@@ -304,6 +314,7 @@
             <article class="menu-item" data-category="plato-principal" data-region="estados-unidos" tabindex="0">
                 <div class="item-image"><img src="./assets/images/menu/hamburguesa.jpg" alt="Hamburguesa Artesanal con Papas Rústicas" loading="lazy"></div>
                 <div class="item-content"><div class="item-header"><h3>Hamburguesa Artesanal con Papas Rústicas <span class="code">(MN015)</span></h3><span class="price">$30,000</span></div>
+                <span></span>
                     <p class="item-description">Pan suave, carne firme y jugosa. Un contraste crujiente de las papas rústicas al lado. (400 g)</p>
                     <p class="item-ingredients">Ingredientes: Carne de res molida, Pan artesanal, Papas, Queso cheddar.</p>
                     <div class="item-meta"><span class="origin"><i class="fas fa-globe-americas"></i> Estados Unidos</span><span class="recommendation" data-rentabilidad="ALTA">✅ Recomendación</span></div></div>
@@ -420,7 +431,7 @@
             <h3 style="grid-column: 1 / -1; color: #FFD700; text-align: left; margin-top: 40px;"><i class="fas fa-users"></i> COMBOS CORPORATIVOS (4)</h3>
 
             <article class="menu-item" data-category="combo" data-region="multicultural" tabindex="0">
-              <div class="item-image"><img src="./assets/images/menu/viaje-sensorial.jpg" alt="Viaje Sensorial" loading="lazy"></div>
+              <div class="item-image"><img src="./assets/images/menu/viaje-sensorial.png" alt="Viaje Sensorial" loading="lazy"></div>
                 <div class="item-content"><div class="item-header"><h3>Viaje Sensorial <span class="code">(MN056)</span></h3><span class="price">$30,000</span></div>
                     <p class="item-description">Combo de 4 platos que explora el gusto: Salado, Dulce, Ácido y Amargo. Ideal para equipos. (730g)</p>
                     <p class="item-ingredients">Ingredientes: Bruschetta, Curry de Garbanzos, Mousse de Maracuyá, Jugo Natural.</p>
@@ -533,68 +544,7 @@
                     <div class="item-meta"><span class="origin"><i class="fas fa-globe-americas"></i> Perú</span><span class="recommendation" data-rentabilidad="ALTA">✅ Recomendación</span></div></div>
             </article>
 
-            <!-- POSTRES (8 ÍTEMS) -->
-            <h3 style="grid-column: 1 / -1; color: #FFD700; text-align: left; margin-top: 20px;"><i class="fas fa-cookie"></i> POSTRES (8)</h3>
-            
-            <article class="menu-item" data-category="postre" data-region="america-latina" tabindex="0">
-                <div class="item-image"><img src="./assets/images/menu/tres-leches.jpg" alt="Tres Leches" loading="lazy"></div>
-                <div class="item-content"><div class="item-header"><h3>Tres Leches <span class="code">(MN007)</span></h3><span class="price">$12,000</span></div>
-                    <p class="item-description">Textura suave y húmeda con sabor dulce a leche condensada. (150 g)</p>
-                    <p class="item-ingredients">Ingredientes: Leche condensada, Leche evaporada, Crema de leche.</p>
-                    <div class="item-meta"><span class="origin"><i class="fas fa-globe-americas"></i> América Latina</span><span class="recommendation" data-rentabilidad="BUENA">Rentabilidad BUENA</span></div></div>
-            </article>
-            <article class="menu-item" data-category="postre" data-region="europa" tabindex="0">
-                <div class="item-image"><img src="./assets/images/menu/tarta-manzana.jpg" alt="Tarta de Manzana" loading="lazy"></div>
-                <div class="item-content"><div class="item-header"><h3>Tarta de Manzana <span class="code">(MN008)</span></h3><span class="price">$12,000</span></div>
-                    <p class="item-description">Base crujiente y manzanas caramelizadas con un toque de mantequilla. (220 g)</p>
-                    <p class="item-ingredients">Ingredientes: Manzanas, Mantequilla, Azúcar.</p>
-                    <div class="item-meta"><span class="origin"><i class="fas fa-globe-europe"></i> Francia</span><span class="recommendation" data-rentabilidad="ALTA">✅ Recomendación</span></div></div>
-            </article>
-            <article class="menu-item" data-category="postre" data-region="estados-unidos" tabindex="0">
-                <div class="item-image"><img src="./assets/images/menu/tarta-queso-frutos-rojos.jpg" alt="Tarta de Queso con Frutos Rojos" loading="lazy"></div>
-                <div class="item-content"><div class="item-header"><h3>Tarta de Queso con Frutos Rojos <span class="code">(MN032)</span></h3><span class="price">$16,500</span></div>
-                    <p class="item-description">Base de galleta arenosa, centro cremoso de queso suave y cubierta ácida de frutos rojos. (240 g)</p>
-                    <p class="item-ingredients">Ingredientes: Queso crema, Galleta, Frutos rojos, Miel.</p>
-                    <div class="item-meta"><span class="origin"><i class="fas fa-globe-americas"></i> Estados Unidos</span><span class="recommendation" data-rentabilidad="ALTA">✅ Recomendación</span></div></div>
-            </article>
-            <article class="menu-item" data-category="postre" data-region="asia" tabindex="0">
-                <div class="item-image"><img src="./assets/images/menu/mochi-te-verde.jpg" alt="Mochi de Té Verde" loading="lazy"></div>
-                <div class="item-content"><div class="item-header"><h3>Mochi de Té Verde <span class="code">(MN035)</span></h3><span class="price">$12,000</span></div>
-                    <p class="item-description">Textura externa elástica y chiclosa, con un sabor ligeramente amargo del té verde. (105 g)</p>
-                    <p class="item-ingredients">Ingredientes: Harina de arroz glutinoso, Té verde en polvo, Azúcar.</p>
-                    <div class="item-meta"><span class="origin"><i class="fas fa-globe-asia"></i> Japón</span><span class="recommendation" data-rentabilidad="BUENA">Rentabilidad BUENA</span></div></div>
-            </article>
-            <article class="menu-item" data-category="postre" data-region="estados-unidos" tabindex="0">
-                <div class="item-image"><img src="./assets/images/menu/brownies-helado.jpg" alt="Brownies con Helado" loading="lazy"></div>
-                <div class="item-content"><div class="item-header"><h3>Brownies con Helado <span class="code">(MN046)</span></h3><span class="price">$18,000</span></div>
-                    <p class="item-description">Brownie tibio y denso de chocolate, contrastado con la temperatura fría y la cremosidad del helado. (180 g)</p>
-                    <p class="item-ingredients">Ingredientes: Chocolate, Harina, Helado de vainilla.</p>
-                    <div class="item-meta"><span class="origin"><i class="fas fa-globe-americas"></i> Estados Unidos</span><span class="recommendation" data-rentabilidad="BUENA">Rentabilidad BUENA</span></div></div>
-            </article>
-            <article class="menu-item" data-category="postre" data-region="oriente-medio" tabindex="0">
-                <div class="item-image"><img src="./assets/images/menu/baklava.jpg" alt="Baklava" loading="lazy"></div>
-                <div class="item-content"><div class="item-header"><h3>Baklava <span class="code">(MN047)</span></h3><span class="price">$15,000</span></div>
-                    <p class="item-description">Múltiples capas de masa fina y crujiente, relleno de nueces troceadas y el jarabe pegajoso de miel. (120 g)</p>
-                    <p class="item-ingredients">Ingredientes: Masa filo, Nueces, Miel.</p>
-                    <div class="item-meta"><span class="origin"><i class="fas fa-globe-africa"></i> Oriente Medio</span><span class="recommendation" data-rentabilidad="BUENA">Rentabilidad BUENA</span></div></div>
-            </article>
-            <article class="menu-item" data-category="postre" data-region="oceania" tabindex="0">
-                <div class="item-image"><img src="./assets/images/menu/lamingtons.jpg" alt="Lamingtons" loading="lazy"></div>
-                <div class="item-content"><div class="item-header"><h3>Lamingtons <span class="code">(MN048)</span></h3><span class="price">$15,000</span></div>
-                    <p class="item-description">Bizcocho muy suave sumergido en chocolate que se derrite y cubierto de hebras de coco seco. (170 g)</p>
-                    <p class="item-ingredients">Ingredientes: Bizcocho, Coco rallado, Chocolate.</p>
-                    <div class="item-meta"><span class="origin"><i class="fas fa-globe"></i> Australia / Oceanía</span><span class="recommendation" data-rentabilidad="BUENA">Rentabilidad BUENA</span></div></div>
-            </article>
-            <article class="menu-item" data-category="postre" data-region="colombia" tabindex="0">
-                <div class="item-image"><img src="./assets/images/menu/flan-arequipe.jpg" alt="Flan de Arequipe" loading="lazy"></div>
-                <div class="item-content"><div class="item-header"><h3>Flan de Arequipe <span class="code">(MN049)</span></h3><span class="price">$12,000</span></div>
-                    <p class="item-description">Textura firme pero temblorosa, con el sabor dulce y caramelizado del arequipe colombiano. (140 g)</p>
-                    <p class="item-ingredients">Ingredientes: Arequipe, Huevos, Leche condensada.</p>
-                    <div class="item-meta"><span class="origin"><i class="fas fa-flag"></i> Colombia</span><span class="recommendation" data-rentabilidad="BUENA">Rentabilidad BUENA</span></div></div>
-            </article>
-            
-            <!-- Bebida (Bar) (27 ítems de la lista original) -->
-            <article class="menu-item" data-category="bebida-bar" data-region="colombia" tabindex="0">
+                        <article class="menu-item" data-category="bebida-bar" data-region="colombia" tabindex="0">
                 <div class="item-image"><img src="./assets/images/menu/chicha-cocktail.jpg" alt="Chicha Cocktail" loading="lazy"></div>
                 <div class="item-content"><div class="item-header"><h3>Chicha Cocktail <span class="code">(MN002)</span></h3><span class="price">$6,000</span></div>
                     <p class="item-description">Sabor dulce de maíz fermentado con un toque cítrico y aroma a fruta fresca. (170 ml)</p>
@@ -752,7 +702,72 @@
                     <div class="item-meta"><span class="origin"><i class="fas fa-globe-europe"></i> Reino Unido</span><span class="recommendation" data-rentabilidad="BUENA">Rentabilidad BUENA</span></div></div>
             </article>
 
+            <!-- POSTRES (8 ÍTEMS) -->
+            <h3 style="grid-column: 1 / -1; color: #FFD700; text-align: left; margin-top: 20px;"><i class="fas fa-cookie"></i> POSTRES (8)</h3>
+            
+            <article class="menu-item" data-category="postre" data-region="america-latina" tabindex="0">
+                <div class="item-image"><img src="./assets/images/menu/tres-leches.jpg" alt="Tres Leches" loading="lazy"></div>
+                <div class="item-content"><div class="item-header"><h3>Tres Leches <span class="code">(MN007)</span></h3><span class="price">$12,000</span></div>
+                    <p class="item-description">Textura suave y húmeda con sabor dulce a leche condensada. (150 g)</p>
+                    <p class="item-ingredients">Ingredientes: Leche condensada, Leche evaporada, Crema de leche.</p>
+                    <div class="item-meta"><span class="origin"><i class="fas fa-globe-americas"></i> América Latina</span><span class="recommendation" data-rentabilidad="BUENA">Rentabilidad BUENA</span></div></div>
+            </article>
+            <article class="menu-item" data-category="postre" data-region="europa" tabindex="0">
+                <div class="item-image"><img src="./assets/images/menu/tarta-manzana.jpg" alt="Tarta de Manzana" loading="lazy"></div>
+                <div class="item-content"><div class="item-header"><h3>Tarta de Manzana <span class="code">(MN008)</span></h3><span class="price">$12,000</span></div>
+                    <p class="item-description">Base crujiente y manzanas caramelizadas con un toque de mantequilla. (220 g)</p>
+                    <p class="item-ingredients">Ingredientes: Manzanas, Mantequilla, Azúcar.</p>
+                    <div class="item-meta"><span class="origin"><i class="fas fa-globe-europe"></i> Francia</span><span class="recommendation" data-rentabilidad="ALTA">✅ Recomendación</span></div></div>
+            </article>
+            <article class="menu-item" data-category="postre" data-region="estados-unidos" tabindex="0">
+                <div class="item-image"><img src="./assets/images/menu/tarta-queso-frutos-rojos.jpg" alt="Tarta de Queso con Frutos Rojos" loading="lazy"></div>
+                <div class="item-content"><div class="item-header"><h3>Tarta de Queso con Frutos Rojos <span class="code">(MN032)</span></h3><span class="price">$16,500</span></div>
+                    <p class="item-description">Base de galleta arenosa, centro cremoso de queso suave y cubierta ácida de frutos rojos. (240 g)</p>
+                    <p class="item-ingredients">Ingredientes: Queso crema, Galleta, Frutos rojos, Miel.</p>
+                    <div class="item-meta"><span class="origin"><i class="fas fa-globe-americas"></i> Estados Unidos</span><span class="recommendation" data-rentabilidad="ALTA">✅ Recomendación</span></div></div>
+            </article>
+            <article class="menu-item" data-category="postre" data-region="asia" tabindex="0">
+                <div class="item-image"><img src="./assets/images/menu/mochi-te-verde.jpg" alt="Mochi de Té Verde" loading="lazy"></div>
+                <div class="item-content"><div class="item-header"><h3>Mochi de Té Verde <span class="code">(MN035)</span></h3><span class="price">$12,000</span></div>
+                    <p class="item-description">Textura externa elástica y chiclosa, con un sabor ligeramente amargo del té verde. (105 g)</p>
+                    <p class="item-ingredients">Ingredientes: Harina de arroz glutinoso, Té verde en polvo, Azúcar.</p>
+                    <div class="item-meta"><span class="origin"><i class="fas fa-globe-asia"></i> Japón</span><span class="recommendation" data-rentabilidad="BUENA">Rentabilidad BUENA</span></div></div>
+            </article>
+            <article class="menu-item" data-category="postre" data-region="estados-unidos" tabindex="0">
+                <div class="item-image"><img src="./assets/images/menu/brownies-helado.jpg" alt="Brownies con Helado" loading="lazy"></div>
+                <div class="item-content"><div class="item-header"><h3>Brownies con Helado <span class="code">(MN046)</span></h3><span class="price">$18,000</span></div>
+                    <p class="item-description">Brownie tibio y denso de chocolate, contrastado con la temperatura fría y la cremosidad del helado. (180 g)</p>
+                    <p class="item-ingredients">Ingredientes: Chocolate, Harina, Helado de vainilla.</p>
+                    <div class="item-meta"><span class="origin"><i class="fas fa-globe-americas"></i> Estados Unidos</span><span class="recommendation" data-rentabilidad="BUENA">Rentabilidad BUENA</span></div></div>
+            </article>
+            <article class="menu-item" data-category="postre" data-region="oriente-medio" tabindex="0">
+                <div class="item-image"><img src="./assets/images/menu/baklava.jpg" alt="Baklava" loading="lazy"></div>
+                <div class="item-content"><div class="item-header"><h3>Baklava <span class="code">(MN047)</span></h3><span class="price">$15,000</span></div>
+                    <p class="item-description">Múltiples capas de masa fina y crujiente, relleno de nueces troceadas y el jarabe pegajoso de miel. (120 g)</p>
+                    <p class="item-ingredients">Ingredientes: Masa filo, Nueces, Miel.</p>
+                    <div class="item-meta"><span class="origin"><i class="fas fa-globe-africa"></i> Oriente Medio</span><span class="recommendation" data-rentabilidad="BUENA">Rentabilidad BUENA</span></div></div>
+            </article>
+            <article class="menu-item" data-category="postre" data-region="oceania" tabindex="0">
+                <div class="item-image"><img src="./assets/images/menu/lamingtons.jpg" alt="Lamingtons" loading="lazy"></div>
+                <div class="item-content"><div class="item-header"><h3>Lamingtons <span class="code">(MN048)</span></h3><span class="price">$15,000</span></div>
+                    <p class="item-description">Bizcocho muy suave sumergido en chocolate que se derrite y cubierto de hebras de coco seco. (170 g)</p>
+                    <p class="item-ingredients">Ingredientes: Bizcocho, Coco rallado, Chocolate.</p>
+                    <div class="item-meta"><span class="origin"><i class="fas fa-globe"></i> Australia / Oceanía</span><span class="recommendation" data-rentabilidad="BUENA">Rentabilidad BUENA</span></div></div>
+            </article>
+            <article class="menu-item" data-category="postre" data-region="colombia" tabindex="0">
+                <div class="item-image"><img src="./assets/images/menu/flan-arequipe.jpg" alt="Flan de Arequipe" loading="lazy"></div>
+                <div class="item-content"><div class="item-header"><h3>Flan de Arequipe <span class="code">(MN049)</span></h3><span class="price">$12,000</span></div>
+                    <p class="item-description">Textura firme pero temblorosa, con el sabor dulce y caramelizado del arequipe colombiano. (140 g)</p>
+                    <p class="item-ingredients">Ingredientes: Arequipe, Huevos, Leche condensada.</p>
+                    <div class="item-meta"><span class="origin"><i class="fas fa-flag"></i> Colombia</span><span class="recommendation" data-rentabilidad="BUENA">Rentabilidad BUENA</span></div></div>
+            </article>
+            
+            <!-- Bebida (Bar) (27 ítems de la lista original) -->
+
+
         </div> <!-- Fin de menu-items -->
+            <!-- Botón expandir menú debe ir dentro del grid para que JS lo detecte correctamente -->
+            <button id="expand-menu-btn" class="btn btn-secondary" style="margin: 32px auto 0 auto; display: block; width: fit-content; grid-column: 1 / -1;">Ver más platos</button>
             </div>
         </section>
 
@@ -785,7 +800,7 @@
 
                     <!-- Imagen 2 -->
                     <div class="gallery-item" data-category="platos">
-                        <img src="./assets/images/gallery/plato-1.jpg" alt="Plato signature de BlindSpot" loading="lazy">
+                        <img src="./assets/images/gallery/plato-1.png" alt="Plato signature de BlindSpot" loading="lazy">
                         <div class="gallery-overlay">
                             <h3>Creación Sensorial</h3>
                             <p>Texturas y sabores únicos</p>
@@ -922,7 +937,7 @@
                         <!-- Artículo 3 -->
                         <article class="blog-card">
                             <div class="blog-image">
-                                <img src="./assets/images/blog/post-3.jpg" alt="Reconocimiento a BlindSpot" loading="lazy">
+                                <img src="./assets/images/blog/post-3.png" alt="Reconocimiento a BlindSpot" loading="lazy">
                                 <div class="blog-category">Noticias</div>
                             </div>
                             <div class="blog-content">
@@ -1122,7 +1137,7 @@
             <div class="container">
                 <div class="footer-grid">
                     <div class="footer-col">
-                        <img src="./assets/images/logo-blindspot-white.png" alt="BlindSpot Logo" class="footer-logo">
+                        <img src="./assets/images/logo-blindspot.png" alt="BlindSpot Logo" class="footer-logo">
                         <p class="footer-description">El primer restaurante sensorial inclusivo de Bogotá, diseñado para personas con discapacidad visual pero abierto a todos.</p>
                         <div class="footer-contact">
                             <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Cl. 120a #6a-16, Bogotá</p>

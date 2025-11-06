@@ -28,83 +28,21 @@ function triggerVibration(duration) {
     }
 }
 
-// Función removida de speakFeedback para mejorar la experiencia de usuario
+
+// ===== LECTOR DE VOZ ACCESIBLE =====
+function speakFeedback(text) {
+    if (!window.speechSynthesis) return;
+    window.speechSynthesis.cancel(); // Detener cualquier mensaje anterior
+    const utter = new window.SpeechSynthesisUtterance(text);
+    utter.lang = 'es-ES';
+    utter.rate = 1;
+    utter.pitch = 1;
+    window.speechSynthesis.speak(utter);
+}
 
 // ===== FUNCIONES DE CONFIGURACIÓN =====
-function setupAccessibilityTools() {
-    const highContrastBtn = document.getElementById('high-contrast');
-    if (highContrastBtn) {
-        highContrastBtn.addEventListener('click', toggleHighContrast);
-    }
-}
 
-function initializeSavedPreferences() {
-    if (localStorage.getItem('highContrast') === 'true') {
-        document.body.classList.add('high-contrast');
-    }
-}
 
-function toggleHighContrast() {
-    document.body.classList.toggle('high-contrast');
-    const isActive = document.body.classList.contains('high-contrast');
-    localStorage.setItem('highContrast', isActive);
-    // speakFeedback removido
-}
-
-function setupMenuFilters() {
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const subcategoryBtns = document.querySelectorAll('.subcategory-btn');
-    const menuItems = document.querySelectorAll('.menu-item');
-    let currentCategory = 'all';
-    let currentRegion = 'all';
-
-    function filterItems() {
-        menuItems.forEach(item => {
-            const matchesCategory = currentCategory === 'all' || item.dataset.category === currentCategory;
-            const matchesRegion = currentRegion === 'all' || item.dataset.region === currentRegion;
-            
-            if (matchesCategory && matchesRegion) {
-                item.style.display = 'block';
-                item.style.opacity = '0';
-                setTimeout(() => {
-                    item.style.opacity = '1';
-                }, 50);
-            } else {
-                item.style.display = 'none';
-            }
-        });
-    }
-
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            filterBtns.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-            
-            currentCategory = this.dataset.category;
-            filterItems();
-
-            if (window.innerWidth <= 768) {
-                menuFilters.classList.remove('show');
-            }
-
-            speakFeedback(`Mostrando ${currentCategory === 'all' ? 'todos los platos' : 'platos ' + currentCategory}`);
-        });
-    });
-
-    subcategoryBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            subcategoryBtns.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-            
-            currentRegion = this.dataset.region;
-            filterItems();
-
-            speakFeedback(`Filtrando por región: ${this.textContent.trim()}`);
-        });
-    });
-
-    filterItems();
-}
 
 function setupMobileMenu() {
     const menuToggle = document.querySelector('.menu-toggle');
@@ -258,27 +196,7 @@ function setupAnimations() {
     }
 }
 
-// ===== INICIALIZACIÓN =====
-document.addEventListener('DOMContentLoaded', function() {
-    // 1. Inicializar preferencias y accesibilidad
-    initializeSavedPreferences();
-    setupAccessibilityTools();
-    
-    // 2. Configurar navegación y efectos
-    setupSmoothScrolling();
-    setupHoverEffects();
-    
-    // 3. Configurar menú y filtros
-    setupMenuFilters();
-    setupMobileMenu();
-    
-    // 4. Configurar formularios y contacto
-    setupReservationForm();
-    setupContactButtons();
-    
-    // 5. Configurar animaciones
-    setupAnimations();
-});
+
 
     // ===== FUNCIONALIDADES PRINCIPALES =====
 // ===== RESPONSIVE HANDLERS =====
@@ -349,7 +267,42 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 5. Inicializar efectos del menú
     initializeMenu();
+    // Mostrar solo una parte del menú y expandir con botón
+    setupMenuExpand();
 });
+
+// Mostrar solo una parte del menú y expandir con botón
+function setupMenuExpand() {
+    const menuItemsContainer = document.querySelector('.menu-items');
+    if (!menuItemsContainer) return;
+    const menuItems = Array.from(menuItemsContainer.children).filter(el => el.classList && el.classList.contains('menu-item'));
+    const expandBtn = menuItemsContainer.querySelector('#expand-menu-btn');
+    const ITEMS_TO_SHOW = 6;
+    if (!expandBtn || menuItems.length <= ITEMS_TO_SHOW) {
+        if (expandBtn) expandBtn.style.display = 'none';
+        return;
+    }
+    // Oculta todos menos los primeros N
+    menuItems.forEach((item, idx) => {
+        if (idx >= ITEMS_TO_SHOW) item.style.display = 'none';
+    });
+    expandBtn.addEventListener('click', function() {
+        const isExpanded = expandBtn.getAttribute('data-expanded') === 'true';
+        if (!isExpanded) {
+            menuItems.forEach(item => item.style.display = '');
+            expandBtn.textContent = 'Ver menos';
+            expandBtn.setAttribute('data-expanded', 'true');
+            speakFeedback('Menú expandido, se muestran todos los platos');
+        } else {
+            menuItems.forEach((item, idx) => {
+                if (idx >= ITEMS_TO_SHOW) item.style.display = 'none';
+            });
+            expandBtn.textContent = 'Ver más platos';
+            expandBtn.setAttribute('data-expanded', 'false');
+            speakFeedback('Menú contraído, solo se muestran los primeros platos');
+        }
+    });
+}
 
 // ===== ACCESIBILIDAD =====
 function setupAccessibilityTools() {
@@ -543,47 +496,6 @@ function setupContactButtons() {
   }
 }
 
-// ===== SCROLL SUAVE =====
-function setupSmoothScrolling() {
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-        speakFeedback(`Navegando a ${target.getAttribute('aria-labelledby') || 'sección'}`);
-      }
-    });
-  });
-}
-
-// ===== EFECTOS DE INTERACCIÓN =====
-function setupHoverEffects() {
-    // Efectos para items del menú
-    document.querySelectorAll('.menu-item').forEach(element => {
-        element.addEventListener('mouseenter', () => {
-            element.style.transform = 'translateY(-5px)';
-            element.style.borderColor = 'var(--accent)';
-        });
-        
-        element.addEventListener('mouseleave', () => {
-            element.style.transform = '';
-            element.style.borderColor = 'rgba(200, 164, 86, 0.1)';
-        });
-        
-        element.addEventListener('focus', () => {
-            element.style.transform = 'translateY(-5px)';
-            element.style.borderColor = 'var(--accent)';
-        });
-        
-        element.addEventListener('blur', () => {
-            element.style.transform = '';
-            element.style.borderColor = 'rgba(200, 164, 86, 0.1)';
-        });
-    });
 
     // Efectos para botones
     document.querySelectorAll('.btn, .filter-btn').forEach(button => {

@@ -1,3 +1,15 @@
+.braille-label {
+  display: block;
+  font-size: 1.25rem;
+  color: #ccc;
+  margin-top: 2px;
+  margin-bottom: 4px;
+  letter-spacing: 0.18em;
+  font-family: 'Arial', 'Segoe UI', sans-serif;
+  user-select: all;
+  line-height: 1.1;
+  text-shadow: 0 1px 2px #000;
+}
 /* ===== VARIABLES ===== */
 :root {
   /* Accesibilidad: paleta alto contraste */
@@ -141,18 +153,23 @@
 }
 
 body {
-    font-family: var(--font-body);
-    background-color: var(--dark);
-    color: var(--light);
-    line-height: 1.6;
-    font-weight: 300;
+  font-family: var(--font-body);
+  background-color: var(--dark);
+  color: var(--light);
+  line-height: 1.6;
+  font-weight: 300;
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
 }
 
 .sr-only {
@@ -1522,6 +1539,10 @@ video {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   margin-top: 10px;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .menu-item {
@@ -1535,12 +1556,15 @@ video {
   transition: box-shadow 0.35s cubic-bezier(0.4,0,0.2,1), transform 0.25s cubic-bezier(0.4,0,0.2,1), background 0.3s;
   position: relative;
   min-width: 0;
+  max-width: 100%;
   min-height: 340px;
   outline: none;
   cursor: pointer;
   border: 1.5px solid rgba(229, 180, 91, 0.13);
   overflow: hidden;
   animation: fadeInUp 0.7s cubic-bezier(0.4,0,0.2,1) both;
+  box-sizing: border-box;
+  word-break: break-word;
 }
 
 @keyframes fadeInUp {
