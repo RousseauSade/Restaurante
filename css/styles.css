@@ -88,7 +88,7 @@
   }
   body {
     padding: 0;
-    font-size: 1rem;
+    font-size: 0.95rem;
     max-width: 100vw;
     overflow-x: hidden;
   }
@@ -1410,26 +1410,52 @@ footer {
 
 /* Responsive Footer */
 @media (max-width: 1200px) {
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-bottom-content {
+  .about-grid {
     flex-direction: column;
-    text-align: center;
-    gap: 15px;
+    gap: 18px;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
   }
-
-  .footer-legal {
+  .about-content {
+    min-width: 0;
+    padding: 0 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .about-image {
+    width: 100%;
     justify-content: center;
-    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  .about-image img {
+    max-width: 100vw;
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+  }
+  .about-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .stat-item {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .values-grid {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+  .value-item {
+    min-width: 0;
+    padding: 1rem 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 
@@ -1693,12 +1719,12 @@ video {
 
 .price {
   font-family: var(--font-subtitle);
-  font-size: 1.08rem;
+  font-size: 1.0rem;
   color: var(--secondary);
   font-weight: 700;
   background: rgba(229,180,91,0.10);
   border-radius: 8px;
-  padding: 2px 10px;
+  padding: 2px 5px;
   margin-left: 8px;
 }
 
