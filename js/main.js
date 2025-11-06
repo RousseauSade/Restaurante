@@ -496,7 +496,8 @@ function setupContactButtons() {
   }
 }
 
-
+// ===== EFECTOS VISUALES =====
+function setupVisualEffects() {
     // Efectos para botones
     document.querySelectorAll('.btn, .filter-btn').forEach(button => {
         button.addEventListener('mouseenter', () => {
