@@ -56,19 +56,20 @@
             </button>
 
             <!-- Navegación Principal -->
-            <nav role="navigation" aria-label="Menú principal">
-                <ul>
-                    <li><a href="#inicio" aria-current="page">Inicio</a></li>
+            <!-- Menú principal para mobile y desktop -->
+            <div class="navbar-menu" role="navigation" aria-label="Menú principal">
+                <ul class="navbar-links">
                     <li><a href="#about">Sobre Nosotros</a></li>
-                    <li><a href="#menu">Menú</a></li>
                     <li><a href="#experiencia">Experiencia</a></li>
+                    <li><a href="#menu">Menú</a></li>
                     <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#blog">Blog</a></li>
                     <li><a href="#testimonios">Testimonios</a></li>
                     <li><a href="#reservas">Reservas</a></li>
-                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#ubicacion">Ubicación</a></li>
                     <li><a href="#contactanos">Contacto</a></li>
                 </ul>
-            </nav>
+            </div>
 
             <!-- Selector de Accesibilidad -->
             <div class="accessibility-tools">
@@ -865,27 +866,39 @@
                         <i class="fas fa-times"></i>
                     </button>
                     <img id="modal-image" src="" alt="">
-                    <div class="modal-caption">
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección Blog -->
-        <section id="blog" class="section-dark" aria-labelledby="blog-heading">
-            <div class="container">
-                <h2 id="blog-heading">Últimas Noticias</h2>
-                <p class="section-subtitle">Descubre historias, eventos y novedades de BlindSpot</p>
-
-                <div class="blog-grid">
-                    <!-- Artículo Principal -->
-                    <article class="blog-featured">
-                        <div class="blog-image">
-                            <img src="./assets/images/blog/featured-post.jpg" alt="Chef invitado internacional en BlindSpot" loading="lazy">
-                            <div class="blog-category">Eventos Especiales</div>
+                    <div class="Navigation">
+                        <!-- Logo -->
+                        <div class="logo">
+                            <!-- Aquí va tu logo -->
+                            <img src="./assets/images/blindspot_embedded.svg" alt="BlindSpot Logo" />
                         </div>
+
+                        <!-- Botón menú móvil -->
+                        <button class="mobile-menu-btn" aria-label="Abrir menú">
+                            <i class="fas fa-bars"></i>
+                        </button>
+
+                        <!-- Menú principal para mobile y desktop -->
+                        <div class="navbar-menu">
+                            <ul class="navbar-links">
+                                <li><a href="#about">Sobre Nosotros</a></li>
+                                <li><a href="#experiencia">Experiencia</a></li>
+                                <li><a href="#menu">Menú</a></li>
+                                <li><a href="#galeria">Galería</a></li>
+                                <li><a href="#blog">Blog</a></li>
+                                <li><a href="#testimonios">Testimonios</a></li>
+                                <li><a href="#reservas">Reservas</a></li>
+                                <li><a href="#ubicacion">Ubicación</a></li>
+                                <li><a href="#contactanos">Contacto</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Selector de Accesibilidad -->
+                        <div class="accessibility-tools">
+                            <!-- Aquí van los botones de accesibilidad -->
+                            <button id="high-contrast" aria-label="Alto contraste"><i class="fas fa-adjust"></i></button>
+                        </div>
+                    </div>
                         <div class="blog-content">
                             <h3>Chef Internacional se une a BlindSpot para una experiencia única</h3>
                             <p class="blog-meta">

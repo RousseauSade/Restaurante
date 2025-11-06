@@ -249,6 +249,8 @@ function initializeMenu() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    // 0. Ajustar padding-top para barra de navegación fija (ya no necesario)
+
     // 1. Inicializar preferencias guardadas
     initializeSavedPreferences();
 
@@ -257,19 +259,71 @@ document.addEventListener('DOMContentLoaded', function() {
     setupMenuFilters();
     setupReservationForm();
     setupContactButtons();
-    
+
     // 3. Configurar navegación y efectos
     setupSmoothScrolling();
     setupHoverEffects();
-    
+
     // 4. Configurar funcionalidades responsive
     setupResponsiveHandlers();
-    
+
     // 5. Inicializar efectos del menú
     initializeMenu();
     // Mostrar solo una parte del menú y expandir con botón
     setupMenuExpand();
+
+    // 6. Configurar menú móvil
+    setupMobileNavbarMenu();
 });
+// ===== MENÚ NAVBAR MOBILE =====
+function setupMobileNavbarMenu() {
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const navbarMenu = document.querySelector('.navbar-menu');
+    if (!menuBtn || !navbarMenu) return;
+
+    menuBtn.addEventListener('click', function() {
+        navbarMenu.classList.toggle('active');
+        // Evita scroll del body cuando el menú está abierto
+        if (navbarMenu.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Cerrar menú al hacer click en un enlace
+    navbarMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+            navbarMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+
+    // Cerrar menú al cambiar tamaño de pantalla
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 700) {
+            navbarMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+}
+
+// Añadir clase al body para compensar la barra de navegación fija
+function ajustarPaddingBarraNavegacion() {
+    const body = document.body;
+    // Detectar ancho de pantalla para altura de barra
+    function updatePadding() {
+        if (window.innerWidth <= 768) {
+            body.classList.add('with-fixed-nav');
+            body.style.paddingTop = '70px';
+        } else {
+            body.classList.add('with-fixed-nav');
+            body.style.paddingTop = '90px';
+        }
+    }
+    updatePadding();
+    window.addEventListener('resize', updatePadding);
+}
 
 // Mostrar solo una parte del menú y expandir con botón
 function setupMenuExpand() {
